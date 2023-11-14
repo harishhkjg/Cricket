@@ -64,7 +64,7 @@ public class MatchServiceImpl implements MatchService {
         matchRepo.save(match);
         return match;
 
-        
+
     }
     private void StartInnings(Match match, Team BattingTeam, Team BowlingTeam, int totalBalls, int Playersize) {
         int InningsScore = 0;
