@@ -86,7 +86,6 @@ public class MatchServiceImpl implements MatchService {
 
 
         match.addTeamResult(BattingTeam.getTeamname(), InningsScore, wicketCount, EachBall,batsmanNamedata);
-        match.addTeamResult(BattingTeam.getTeamname(), InningsScore, wicketCount, EachBall);
     }
 
     private int RandomBallGenerator() {
