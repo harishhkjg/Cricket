@@ -70,17 +70,18 @@ public class MatchServiceImpl implements MatchService {
         int InningsScore = 0;
         int wicketCount = 0;
         List<String> EachBall = new ArrayList<>();
+
         for (int ball = 1; ball <= totalBalls && wicketCount<Playersize; ball++) {
             int StoreBalls = RandomBallGenerator();
             if (StoreBalls == 7) {
                 wicketCount++;
                 EachBall.add("W");
-
             } else {
                 InningsScore += StoreBalls;
                 EachBall.add(String.valueOf(StoreBalls));
             }
         }
+
 
         match.addTeamResult(BattingTeam.getTeamname(), InningsScore, wicketCount, EachBall);
     }
@@ -88,6 +89,8 @@ public class MatchServiceImpl implements MatchService {
 
         return (int) (Math.random() * 8);
     }
+
+
     private int IndividualTeamScore(Match match, String teamname) {
         int totalScore = 0 ;
         for(TeamResults teamResults : match.getTeamResults()){
