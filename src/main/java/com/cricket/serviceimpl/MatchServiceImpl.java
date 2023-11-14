@@ -64,7 +64,7 @@ public class MatchServiceImpl implements MatchService {
         matchRepo.save(match);
         return match;
 
-        
+
     }
     private void StartInnings(Match match, Team BattingTeam, Team BowlingTeam, int totalBalls, int Playersize) {
         int InningsScore = 0;
@@ -86,7 +86,6 @@ public class MatchServiceImpl implements MatchService {
 
 
         match.addTeamResult(BattingTeam.getTeamname(), InningsScore, wicketCount, EachBall,batsmanNamedata);
-        match.addTeamResult(BattingTeam.getTeamname(), InningsScore, wicketCount, EachBall);
     }
 
     private int RandomBallGenerator() {
