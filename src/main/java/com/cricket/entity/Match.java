@@ -23,11 +23,11 @@ public class Match {
     private List<TeamResults> teamResults;
     private String winner;
 
-    public void addTeamResult(String battingTeam, int totalScore, int wickets, List<String> ballByBall) {
+    public void addTeamResult(String battingTeam, int totalScore, int wickets, List<String> ballByBall,List<String> batsmanName) {
         if (teamResults == null) {
             teamResults = new ArrayList<>();
         }
-        TeamResults teamresult = new TeamResults(battingTeam, totalScore, wickets, ballByBall);
+        TeamResults teamresult = new TeamResults(battingTeam, totalScore, wickets, ballByBall,batsmanName);
         teamResults.add(teamresult);
     }
 }
