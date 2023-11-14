@@ -15,5 +15,7 @@ public class TeamResults {
     private int totalScore;
     private int wickets;
     private List<String> ballByBall;
+
     private List<String> batsmanName;
+
 }
